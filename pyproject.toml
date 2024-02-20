@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "adventofcode-python"
+version = "0.1.0"
+description = ""
+authors = ["Jason Walton <jwalton512@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "aoc", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+click = "^8.1.7"
+requests = "^2.31.0"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.10.1"
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+aoc = 'aoc.__main__:cli'
